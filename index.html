@@ -1,118 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Smart Bird Feeder</title>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>YourPiAtHome</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" ></script>
   </head>
   <body>
-    <img
-      src="https://cdn.glitch.global/16786b6d-b7cd-4f5b-a05c-7bd7f73ccdd9/banner.jpg?v=1671822639197"
-      class="ui centered large image"
-    />
-    <section class="ui container">
-      <header class="ui stacked segment">
-        <h1>Smart Bird Feeder</h1>
-      </header>
-      <div class="ui grid">
-        <div class="ui twelve wide column">
-          <nav>
-            <ul class="ui three item tabular menu">
-              <li id="home" class="ui item"><a href="index.html">About</a></li>
-              <li id="birds" class="ui item"><a href="birds.html">Birds</a></li>
-              <li id="gallery" class="ui item">
-                <a href="gallery.html">Gallery</a>
-              </li>
-            </ul>
-          </nav>
-          <script>
-            document.querySelector("#home").classList.add("active");
-          </script>
-          <main>
-            <article class="ui basic segment">
-              <p>
-                I have a bird feeder for small birds in my garden. I usually
-                fill it in the morning before I leave for work but know very
-                little about what goes on at the feeder when I am gone
-              </p>
-              <p>
-                I wanted to create a Smart Bird Feeder that would tell me more
-                about the activities at the feeder. This was achieved using a
-                RaspberryPi, PIR sensor, camera and some Python code.
-              </p>
-              <p class="ui inverted teal segment">
-                It's important to remember to leave food out for the birds
-                especially at this time of year. Using ThingSpeak and Open
-                Weather API, a reminder tweet is sent when the temperature is
-                below five degrees.
-              </p>
-              <h2>Platforms</h2>
-              <p>The platforms used to creating this project include:</p>
-              <div class="ui inverted blue segment">
-                <ul class="ui list">
-                  <div class="item">ThingSpeak</div>
-                  <div class="item">Twitter</div>
-                  <div class="item">Firebase</div>
-                  <div class="item">Glitch</div>
-                </ul>
-              </div>
-              <p>
-                This page includes some of my findings, including a gallery of
-                the best images captured by the Pi camera
-              </p>
-            </article>
-          </main>
-        </div>
-        <div class="ui four wide column">
-          <aside>
-            <div class="ui card">
-              <div class="image">
-                <img
-                  src="https://cdn.glitch.global/16786b6d-b7cd-4f5b-a05c-7bd7f73ccdd9/IMG_1380.jpg?v=1671820612903"
-                />
-              </div>
-              <div class="content">
-                <a class="header">Set Up</a>
-                <div class="meta">
-                  <span class="date">Items Required</span>
-                </div>
-                <div class="description">
-                  RPi, sensor and camera conected in a weather-proof case.
-                </div>
-              </div>
-            </div>
-            <div class="ui card">
-              <div class="image">
-                <img
-                  src="https://cdn.glitch.global/16786b6d-b7cd-4f5b-a05c-7bd7f73ccdd9/data.png?v=1671815630287"
-                />
-              </div>
-              <div class="content">
-                <a class="header">Findings</a>
-                <div class="meta">
-                  <span class="date">ThingSpeak Data</span>
-                </div>
-                <div class="description">
-                  ThingSpeak data checking daily temperature in the area and to
-                  detect motion at the feeder.
-                </div>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </div>
-      <footer class="ui stacked segment">
-        <p>
-          For more information on this project visit
-          https://github.com/lindmlynch/smart-bird-feeder
-        </p>
-      </footer>
-    </section>
+    <h1>Raspberry Pi Bird Feeder Cam</h1>
+
+    <p>
+      Activity at your bird feeder at <span id="time"></span>: <br>
+      <img id="photo" />
+    </p>
+
+
   </body>
 </html>

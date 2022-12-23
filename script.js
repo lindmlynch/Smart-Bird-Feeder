@@ -1,40 +1,27 @@
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyByyvG_8PTsyPeDSbvBJj252oNa_zdYEBU",
-  authDomain: "birdpi-35dd0.firebaseapp.com",
-  databaseURL: "https://birdpi-35dd0-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "birdpi-35dd0",
-  storageBucket: "birdpi-35dd0.appspot.com",
-  messagingSenderId: "987008306339",
-  appId: "1:987008306339:web:acca21820342749c818316"
-};
+/*
+This is your site JavaScript code - you can add interactivity and carry out processing
+- Initially the JS writes a message to the console, and moves a button you can add from the README
+*/
 
-firebase.initializeApp(firebaseConfig);
+// Print a message in the browser's dev tools console each time the page loads
+// Use your menus or right-click / control-click and choose "Inspect" > "Console"
+console.log("Hello 🌎");
 
-// Get a reference to the file storage service
-const storage = firebase.storage();
-// Get a reference to the database service
-const database = firebase.database();
+/* 
+Make the "Click me!" button move when the visitor clicks it:
+- First add the button to the page by following the "Next steps" in the README
+*/
+const btn = document.querySelector("button"); // Get the button from the page
+// Detect clicks on the button
+if (btn) {
+  btn.onclick = function() {
+    // The JS works in conjunction with the 'dipped' code in style.css
+    btn.classList.toggle("dipped");
+  };
+}
 
-// Create camera database reference
-const camRef = database.ref("file");
-
-// Sync on any updates to the DB. THIS CODE RUNS EVERY TIME AN UPDATE OCCURS ON THE DB.
-camRef.limitToLast(1).on("value", function(snapshot) {
-  snapshot.forEach(function(childSnapshot) {
-    const image = childSnapshot.val()["image"];
-    const time = childSnapshot.val()["timestamp"];
-    const storageRef = storage.ref(image);
-
-    storageRef
-      .getDownloadURL()
-      .then(function(url) {
-        console.log(url);
-        document.getElementById("photo").src = url;
-        document.getElementById("time").innerText = time;
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-  });
-});
+// This is a single line JS comment
+/*
+This is a comment that can span multiple lines 
+- use comments to make your own notes!
+*/

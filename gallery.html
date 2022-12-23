@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Smart Bird Feeder</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
+  </head>
+  <body>
+    <img src="https://cdn.glitch.global/16786b6d-b7cd-4f5b-a05c-7bd7f73ccdd9/banner.jpg?v=1671822639197" class="ui centered large image" />
+    <section class="ui container">
+      <header class="ui stacked segment">
+        <h1>Smart Bird Feeder</h1>
+      </header>
+      <div class="ui grid">
+        <div class="ui twelve wide column">
+          <nav>
+            <ul class="ui three item tabular menu">
+              <li id="about" class="ui item"><a href="index.html">About</a></li>
+              <li id="birds" class="ui item"><a href="birds.html">Birds</a></li>
+              <li id="gallery" class="ui item">
+                <a href="gallery.html">Gallery</a>
+              </li>
+            </ul>
+          </nav>
+          <main>
+            <div class="ui medium images">
+              <img src="https://cdn.glitch.global/16786b6d-b7cd-4f5b-a05c-7bd7f73ccdd9/bird7.jpg?v=1671814850480" />
+              <img src="https://cdn.glitch.global/16786b6d-b7cd-4f5b-a05c-7bd7f73ccdd9/bird32.jpg?v=1671815057649" />
+              <img src="https://cdn.glitch.global/16786b6d-b7cd-4f5b-a05c-7bd7f73ccdd9/bird42.jpg?v=1671815077565" />
+              <img src="https://cdn.glitch.global/16786b6d-b7cd-4f5b-a05c-7bd7f73ccdd9/bird46.jpg?v=1671815115686" />
+              <img src="https://cdn.glitch.global/16786b6d-b7cd-4f5b-a05c-7bd7f73ccdd9/bird57.jpg?v=1671815164556" />
+              <img src=https://cdn.glitch.global/16786b6d-b7cd-4f5b-a05c-7bd7f73ccdd9/bird54.jpg?v=1671815426639"" />
+              <img src="https://cdn.glitch.global/16786b6d-b7cd-4f5b-a05c-7bd7f73ccdd9/bird20.jpg?v=1671815265308" />
+              <img src="https://cdn.glitch.global/16786b6d-b7cd-4f5b-a05c-7bd7f73ccdd9/bird18.jpg?v=1671815287324" />
+              <img src="https://cdn.glitch.global/16786b6d-b7cd-4f5b-a05c-7bd7f73ccdd9/bird61.jpg?v=1671815354264" />
+              <img src="https://cdn.glitch.global/16786b6d-b7cd-4f5b-a05c-7bd7f73ccdd9/bird59.jpg?v=1671815376706" />
+            </div>
+          </main>
+        </div>
+        <script>
+          document.querySelector("#gallery").classList.add("active");
+        </script>
+
+        <div class="ui four wide column">
+          <aside>
+            <div class="ui card">
+              <div class="image">
+                <img src="https://cdn.glitch.global/16786b6d-b7cd-4f5b-a05c-7bd7f73ccdd9/IMG_1380.jpg?v=1671820612903" />
+              <div class="content">
+                <a class="header">Set Up</a>
+                <div class="meta">
+                  <span class="date">Items Required</span>
+                </div>
+                <div class="description">
+                  RPi, sensor and camera conected in a weather-proof case.
+                </div>
+              </div>
+            </div>
+            <div class="ui card">
+              <div class="image">
+                <img src="https://cdn.glitch.global/16786b6d-b7cd-4f5b-a05c-7bd7f73ccdd9/data.png?v=1671815630287" />
+              </div>
+              <div class="content">
+                <a class="header">Findings</a>
+                <div class="meta">
+                  <span class="date">ThingSpeak Data</span>
+                </div>
+                <div class="description">
+                  ThingSpeak data checking daily temperature in the area and to
+                  detect motion at the feeder.
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <footer class="ui stacked segment">
+        <p>
+          For more information on this project visit https://github.com/lindmlynch/smart-bird-feeder
+        </p>
+      </footer>
+    </section>
+  </body>
+</html>
